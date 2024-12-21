@@ -9,11 +9,11 @@ type TJoke = {
     type: string,
     id: number
 }
-function JokeGeneratorForm(props) {
+function JokeGeneratorForm() {
     const [joke, setJoke] = useState<TJoke | null>(null)
     const [loading, setLoading] = useState<boolean>(false)
 
-    const submitHandler = async(e) => {
+    const submitHandler = async(e: React.FormEvent) => {
         e.preventDefault()
         setLoading(true)
        try {
@@ -21,7 +21,7 @@ function JokeGeneratorForm(props) {
            const joke = await res.json()
            setJoke(joke)
        }catch(e){
-           throw new Error(e)
+           console.log(e)
        }finally{
            setLoading(false)
        }

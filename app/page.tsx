@@ -1,4 +1,3 @@
-import Image from "next/image";
 import JokeGeneratorForm from "@/components/JokeGeneratorForm";
 
 export default function Home() {
