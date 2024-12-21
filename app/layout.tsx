@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,13 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "LaughLine",
-  description: "LaughLine is your go-to app for an endless" +
-      " supply of laughter! Designed to tickle every funny bone," +
-      " LaughLine generates a wide variety of jokes, from witty one-liners" +
-      " and clever puns to groan-worthy dad jokes. Perfect for breaking the ice," +
-      " lightening up your day, or sharing laughs with friends, LaughLine ensures there’s " +
-      "always a reason to smile. With easy sharing options and a personalized joke experience," +
-      " it's your ultimate humor companion!",
+  description: "Generate laughter instantly with LaughLine, your ultimate joke generator app. Explore witty one-liners, puns, and dad jokes, and share the fun effortlessly. Lighten your day with humor!",
 };
 
 export default function RootLayout({
@@ -33,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      <Header/>
         {children}
       </body>
     </html>
