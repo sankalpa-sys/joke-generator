@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+    @apply bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold py-4 px-10 rounded-md text-xl w-full disabled:opacity-50 disabled:cursor-not-allowed;
+}
